@@ -1,18 +1,14 @@
 #include <iostream>
 using namespace std;
 
-class Rectangle {
-private:
-    double width, height;
+int counter = 0;
 
-public:
-    Rectangle(double w, double h) : width(w), height(h) {}
+void increment() { counter++; }
 
-    double area() { return width * height; }
-};
+int getCount() { return counter; }
 
 int main() {
-    Rectangle rect(5, 10);
-    cout << rect.area() << endl;  // Output: 50
+    increment();
+    cout << getCount() << endl;  // Output: 1
     return 0;
 }
